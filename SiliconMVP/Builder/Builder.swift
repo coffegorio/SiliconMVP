@@ -33,18 +33,7 @@ class Builder {
     
     static func createOnboardingView() -> UIViewController {
         let view = createView(viewType: OnboardingView.self) { view in
-            OnboardingViewPresenter(view: view, userService: UserService.shared)
-        }
-        return view
-    }
-    
-    static func createLoginView() -> UIViewController {
-        let view = createView(viewType: LoginView.self) { view in
-            LoginPresenter(
-                view: view,
-                validator: LoginValidator(),
-                userService: UserService.shared
-            )
+            OnboardingViewPresenter(view: view)
         }
         return view
     }

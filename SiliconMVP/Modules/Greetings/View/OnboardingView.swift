@@ -43,8 +43,8 @@ class OnboardingView: UIViewController, OnboardingViewProtocol {
     }
     
     func showLoginScreen() {
-        let loginVC = Builder.createLoginView()
-        loginVC.modalPresentationStyle = .fullScreen
-        present(loginVC, animated: true)
+        let alert = UIAlertController(title: "Информация", message: "Экран авторизации в разработке", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 } 

@@ -15,22 +15,16 @@ protocol OnboardingViewPresenterProtocol: AnyObject {
 class OnboardingViewPresenter: OnboardingViewPresenterProtocol {
     
     weak var view: (any OnboardingViewProtocol)?
-    private let userService: UserServiceProtocol
     
-    init(view: any OnboardingViewProtocol, userService: UserServiceProtocol = UserService.shared) {
+    init(view: any OnboardingViewProtocol) {
         self.view = view
-        self.userService = userService
     }
     
     func onStartButtonTapped() {
-        // Создаем анонимного пользователя перед навигацией
-        let _ = userService.createAnonymousUser()
         view?.navigateToMain()
     }
     
     func onLoginButtonTapped() {
-        // Здесь будет логика показа экрана логина
-        // Сейчас это заглушка с выводом в консоль
         view?.showLoginScreen()
     }
 } 

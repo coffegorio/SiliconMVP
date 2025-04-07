@@ -20,8 +20,6 @@ class GreetingsViewPresenter: GreetingsViewPresenterProtocol {
     }
     
     func onNextButtonTapped() {
-        // Здесь может быть любая бизнес-логика перед навигацией
-        // Например, сохранение состояния, аналитика, и т.д.
         view?.navigateToNextScreen()
     }
 }

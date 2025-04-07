@@ -31,7 +31,7 @@ struct GreetingsViewContent: View {
                     .foregroundStyle(Theme.Colors.text)
                 
                 CustomButtonView(title: "Поехали!", isFill: true) {
-                    onNext()
+                    //
                 }
                 .frame(height: 50)
             }
